@@ -1,0 +1,149 @@
+STATIC BLOCK AND CONSTRUCTOR
+ 
+CONSTRUCTOR : constructors are used to initialize the obj. For every class there will be a default constructor, when ever we create an object constructor will be called. Then object will be created.
+-> constructor having class name and method properties.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+public class q2 {
+    public static void main(String[] args)  {
+        Demo d1 = new Demo();
+        Demo d2 = new Demo();
+    }
+}
+class Demo {
+   static{
+        System.out.println("Static Block");
+   }
+   Demo() {
+       System.out.println("Constructor")
+   }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->>> Here we created two constructors 
+
+STATIC BLOCK : static block will be created with a STATIC keyword , it will call automatically , no need to call with either obj or class.
+STATIC METHOD : For STATIC method no need to call with obj, we can directly call with class name(DEMO) and here STATIC  will act as instance or obj. 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+class Main{
+    public static void main(String[] args){
+        Student obj = new Student();
+        obj.setAge(21);
+        int res = obj.getAge();
+        obj.setName("Lakshmi Raj");
+        String cat = obj.getName();
+        obj.setPassedout(false);
+        boolean lion = obj.getPassedout();
+        obj.setMarks(600);
+        float dog = obj.getMarks();
+        obj.setErp(2203031240449L);
+        long rat = obj.getErp();
+        System.out.println(res);
+        System.out.println(cat);
+        System.out.println(lion);
+        System.out.println(rat);
+    }
+}
+class Student {
+    int age;
+    String name;
+    boolean passedout;
+    float marks;
+    long Erp;
+
+    void setAge(int age1) {
+        this.age = age1;
+    }
+
+    int getAge() {
+        return age;
+    }
+
+    void setName(String name1) {
+        this.name = name1;
+    }
+
+    String getName() {
+        return name;
+    }
+
+    void setPassedout(boolean passedout1) {
+        this.passedout = passedout1;
+    }
+
+    boolean getPassedout() {
+        return passedout;
+    }
+
+    void setMarks(float marks1) {
+        this.marks = marks1;
+    }
+
+    float getMarks() {
+        return marks;
+    }
+
+    void setErp(long erp1) {
+        this.Erp = erp1;
+    }
+
+    long getErp() {
+        return Erp;
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FINDING HCF: 
+
+public class Main{
+    public static void main(String[] args){
+        Person obj = new Person();
+        int ashish = obj.fib(9,27);
+        System.out.println(ashish);
+    }
+}
+
+class Person{
+    int fib(int a, int b){
+        if(b==0){
+            return a;
+        }
+        else{
+            return fib(b, a%b);
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+conditional statements are used to check the condition and to print that relevant block in const time.
+ex: if, else, switch .....
+if(a<b){
+return 0;
+}
+else{
+return a;
+}
+
+CONTROL STATEMENTS : 
+ENTRY CONTROL LOOPS are for and while.
+
+when we know the range we prefer to use FOR loop.
+when we don't know the range we prefer to use WHILE loop.
+
+int arr[] = {1,2,3,4,5};
+    for(int i = 0; i<n; i++){
+        return arr[i];
+}
+    for(start;end;diff){
+    }
+    start;
+    while(end){
+         diff;
+}
+
+class Main{
+    public static void main(String[] args){
+        int num = 5;
+    for(int i = 1; i<=10;i++){
+        System.out.println(num + "*" + i + "=" + (num*i));
+    }
+}
+}

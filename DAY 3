@@ -1,0 +1,102 @@
+NESTED LOOP:
+There are three types of solutions for any problem 
+1.Brute force
+2.Better
+3.Optimal
+
+1.For BRUTE FORCE most of the solutions can be written using two loops(loop inside a loop).
+TIME COMPLEXITY is n*2.
+1.How many rows need to print,
+2.How many columns need to print,
+3.What to print and what not to print.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PATTERN [R]:
+
+
+class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+                if (i == 1 || i == 5 || j == 1 || j == 5) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println(); 
+        }
+        
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+                if (i == j || j ==1 ) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println(); 
+        }
+    }
+}
+        
+        
+        
+        
+        
+        
+        
+        
+  /*      class Main {
+    public static void main(String[] args) {
+        // First Box
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+                if (i == 1 || i == 5 || j == 1 || j == 5) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+
+        // Space between the two boxes (optional)
+        System.out.println();
+
+        // Second Box
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+                if (i == 1 || i == 5 || j == 1 || j == 5) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}*/
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PRIME NUMBERS:
+
+
+import java.util.*;
+class Main{
+    boolean prime(int n){
+        for(int i = 2;i<n;i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+        public static void main(String[] args){
+           Scanner sc = new Scanner(System.in);
+           int n = sc.nextInt();
+           Main obj = new Main();
+           System.out.println(obj.prime(n));
+    }
+}

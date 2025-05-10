@@ -1,3 +1,4 @@
+
 SWITCH CASE:
 
 *Cases have to be the same type as expression, must be be a constant or literal.
@@ -20,5 +21,161 @@ switch(expression){
         break;
     default:
         Statement;
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number between (1-7) : ");
+        int day = sc.nextInt();
+        switch(day){
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid number");
+                
+                
+        }
+        sc.close();
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TERINARY OPERATOR / ENHANCED IF ELSE:
+
+SYNTAX:
+
+(condition) ? statement1 : statement2;
+(n ==5) ? System.out.println("Yes") : System.out.println("No");
+
+
+(condition) ? statement1 : statement2;
+String res = (n ==5) ? ("Yes") : ("No");
+System.out.println("res");
+
+
+
+class Main {
+    public static void main(String[] args) {
+        int n = 5;
+        if(n==5){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        
+            
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ENHANCED FOR LOOP:
+
+*In collections we don't have index values, in those situations we have to use (enhanced for) loops.
+
+class Main {
+    public static void main(String[] args) {
+        int [] arr = {1,2,3,4,5};
+        for(int var : arr){
+            System.out.println(var);
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*
+  ***
+   *****
+    *******
+     *********
+     *********
+    *******
+   *****
+  ***
+ *
+
+
+class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                    System.out.print(" ");
+            }
+            for(int j = 1; j<=(2*i-1);j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = 5; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                    System.out.print(" ");
+            }
+            for(int j = 1; j<=(2*i-1);j++){
+                System.out.print("*");
+            }
+            System.out.println();
+    } 
+}
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    *
+   ***
+  *****
+ *******
+*********
+*********
+ *******
+  *****
+   ***
+    *
+
+class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int num = 1; num <= 2 * i - 1; num++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = 5; i >= 1; i--) {
+            for (int j = 1; j <= 5 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int num = 1; num <= 2 * i - 1; num++) {
+                System.out.print("*");
+            }
+            System.out.println();
+    }
+}
 }
 

@@ -1,0 +1,54 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {7, 1, 5, 3, 6, 4};
+        int n = arr.length;
+        int[] temp = new int[n];
+        int index = 0;
+        int max = Integer.MIN_VALUE;
+        for (int i = n - 1; i >= 0; i--) {
+            if (arr[i] >= max) {
+                temp[index] = arr[i];
+                index++;
+                max = arr[i];
+            }
+        }
+        for (int i = index - 1; i >= 0; i--) {
+            System.out.print(temp[i] + " ");
+        }
+    }
+}
+
+Output:
+
+7 6 4 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ARRAY LIST :
+Array has fixed size once we declare we can't change.
+To increase array size dynamically is  we have to use array list.
+
+
+FRAME WORK :
+It nothing but it contains pre-defined methods and will guide the programs.
+package has pre-defined methods but it will not guide us.
+
+SYNTAX:
+List<Wrapper Class> = ArrayListName = new ArrayList<>();
+ex:
+ArrayList<Integer>leaders = new ArrayList<>();
+Here 
+List is an interface and interface contains incomplete methods.
+Wrapper Class is not a primitive data type , it is a class, And in collections we have to use wrapper classes only.
+<> => is called Generics.
+ArrayList is a class which contains complete methods.
+
+ARRAY LIST is a dynamic array 
+my arr size is 2 , if I try to add 3rd element my size of the array size is doubled and it copies the previous elements vice versa and the array size will become half.
+ex:
+[1,2] => [,] ====> if I WANT TO ADD 3RD ELEMENT [,,,] => [1,2,3,_] (THE ARRAY SIZE IS DOUBLED HERE BECAUSE I WANT TO ADD 3RD ELEMENT).
+
+As ArrayList is a class , we have to import the ArrayList class and now we can access all the pre-defined methods which consists ArrayList.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SUB ARRAY:
+int[] = {-2,1,-3,4,-1,2,1,1,-5,4}

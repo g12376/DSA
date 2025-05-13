@@ -1,0 +1,83 @@
+ASSIGN COOKIES(455):
+
+import java.util.Arrays;
+class Solution {
+    public int findContentChildren(int[] g, int[] s) {
+        int n = g.length;
+        int m = s.length;
+
+        Arrays.sort(g);
+        Arrays.sort(s);
+
+        int i = 0;
+        int r = 0;
+
+        while(i < m && r < n){
+            if(g[r] <= s[i]) {
+                r++;
+            }
+            i++;
+        }
+        return r;
+        }
+    }
+--------------------------------------------------------------------------
+JUMP GAME(55):
+
+class Solution {
+    public boolean canJump(int[] nums) {
+        int maxReach = 0;
+        for(int i = 0;i<nums.length;++i){
+            if(maxReach<i){
+                return false;
+            }
+            maxReach = Math.max(maxReach,i + nums[i]);
+        }
+                return true;
+            }
+        }
+maxReach = Math.max(maxReach,i + nums[i]) ==> here 
+minReach = MAth.min(minReach,i + nums[i])
+if(max>arr[i]){
+     return max;
+else{
+     return arr[i];
+
+--------------------------------------------------------------------------
+RECURSION:
+A function calls itself and itself till it meet base condition.
+There are two types in recursion:
+*Function calling same function itself and itself till it meet base condition. 
+*Function calling another function itself and itself till it meet base condition.
+
+If we didn't mention base condition properly we will get an exception like stack overflow.
+
+Recursions are used to break the code
+
+Ex:
+FACTORIAL OF 5!
+5*4!
+   4*3!
+      3*2!
+         2*1!
+            1*0!==> this is the base condition
+SUEDO CODE:
+Fun factorial(n):
+    If n is 0 or 1:
+        Return 1
+    Else:
+        Return n * factorial(n - 1)
+
+For ever recursive call elements will be push into stack
+After reaching base condition the elements will be popped.
+For our question 5,4,3,2,1 => these hit push to the stack.
+
+-----------------------------------------------------------
+FABINOCCI SERIES :
+Fun fibonacci(n):
+    If n is 0:
+        Return 0
+    Else if n is 1:
+        Return 1
+    Else:
+        Return fibonacci(n - 1) + fibonacci(n - 2)
